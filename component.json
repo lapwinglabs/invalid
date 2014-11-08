@@ -1,0 +1,8 @@
+{
+  "name": "invalid",
+  "version": "0.0.1",
+  "description": "the schema validation library you actually wanted",
+  "dependencies": {
+    "component/type": "1.0.0"
+  }
+}

@@ -76,7 +76,7 @@ Most of the types are self-explanatory, but here are a few unique types:
 
 ### Objects
 
-```
+```js
 Object: Object containing values of any type
 Settings: Setting `object` that is recursively enforced by `invalid`
 ```

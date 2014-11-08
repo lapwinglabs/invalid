@@ -70,7 +70,7 @@ Validate `obj` against a `schema`. If the object is invalid, `invalid` will retu
 
 If you just pass a schema in, you will get a function back that you can use to validate against any number of objects.
 
-## Object Types
+## Types
 
 Most of the types are self-explanatory, but here are a few unique types:
 

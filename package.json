@@ -1,8 +1,14 @@
 {
   "name": "invalid",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "the schema validation library you actually wanted",
-  "keywords": ["schema", "validation", "valid", "object", "type"],
+  "keywords": [
+    "schema",
+    "validation",
+    "valid",
+    "object",
+    "type"
+  ],
   "author": "Matthew Mueller <matt@lapwinglabs.com>",
   "repository": {
     "type": "git",

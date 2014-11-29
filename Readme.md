@@ -12,6 +12,7 @@
 ## Example
 
 ```js
+var isEmail = /\w+@\w+.com/;
 var Settings = {
   view: String,
   theme: String,
@@ -24,7 +25,8 @@ var schema = {
   created: Date,
   settings: Settings,
   tasks: [String],
-  langs: Array
+  langs: Array,
+  email: isEmail
 };
 
 var obj = {
@@ -37,7 +39,8 @@ var obj = {
     facebook: true
   },
   tasks: [4],
-  langs: [3, 'hi']
+  langs: [3, 'hi'],
+  email: 'hi@lapwinglabs.com'
 };
 
 /**

@@ -12,7 +12,8 @@ var schema = {
   created: Date,
   settings: Settings,
   tasks: [Settings],
-  langs: Array
+  langs: Array,
+  email: /\w+@\w+\.com/
 };
 
 var obj = {
@@ -29,7 +30,8 @@ var obj = {
     theme: 'blue',
     facebook: {}
   }],
-  langs: [3, 'hi']
+  langs: [3, 'hi'],
+  email: 'hi'
 };
 
 var errs = invalid(obj, schema);

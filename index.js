@@ -101,6 +101,8 @@ function valid(actual, expected, key) {
   } else if ('array' == et && t == et) {
     for (var i = 0, v; v = actual[i]; i++)
       errs = errs.concat(valid(v, expected[0], key ? key + '[' + i + ']': i));
+  } else if ('regexp' == et && expected instanceof RegExp) {
+    !expected.test(actual) && errs.push(error(t, key, actual, expected));
   } else if (cast[t] != expected) {
     errs.push(error(t, key, actual, expected));
   }
@@ -121,7 +123,11 @@ function valid(actual, expected, key) {
 
 function error(type, key, actual, expected) {
   var msg = key ? key + ': ' : '';
-  msg += fmt(type, actual) + ' is not a ' + typecheck(expected);
+  if (expected instanceof RegExp) {
+    msg += fmt(type, actual) + ' does not match regexp ' + expected;
+  } else {
+    msg += fmt(type, actual) + ' is not a ' + typecheck(expected);
+  }
   return msg;
 }
 

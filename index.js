@@ -2,7 +2,11 @@
  * Type
  */
 
-var type = require('component-type');
+try {
+  var type = require('type');
+} catch (e) {
+  var type = require('component-type');
+}
 
 /**
  * Export `invalid`

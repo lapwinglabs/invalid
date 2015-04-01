@@ -20,5 +20,8 @@
   "devDependencies": {
     "mocha": "*"
   },
+  "browser": {
+    "type": "component-type"
+  },
   "main": "index"
 }

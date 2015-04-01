@@ -2,11 +2,7 @@
  * Type
  */
 
-try {
-  var type = require('type');
-} catch (e) {
-  var type = require('component-type');
-}
+var type = require('component-type');
 
 /**
  * Export `invalid`
@@ -91,8 +87,8 @@ function typecheck(val) {
 function valid(actual, expected, key) {
   key = key || '';
 
-  var et = type(expected);
-  var t = type(actual);
+  var et = typecheck(expected);
+  var t = typecheck(actual);
   var errs = [];
 
   if ('object' == et && t == et) {
@@ -127,7 +123,7 @@ function error(type, key, actual, expected) {
   var msg = key ? key + ': ' : '';
   if (expected instanceof RegExp) {
     msg += fmt(type, actual) + ' does not match regexp ' + expected;
-  } else if (expected instanceof Function) {
+  } else if ('function' == type && !actual.prototype) {
     msg += 'function(' + actual + ') returned false';
   } else {
     msg += fmt(type, actual) + ' is not a ' + typecheck(expected);

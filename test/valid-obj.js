@@ -13,7 +13,11 @@ var schema = {
   settings: Settings,
   tasks: [Settings],
   langs: Array,
-  email: /\w+@\w+\.com/
+  test: Function,
+  email: /\w+@\w+\.com/,
+  alternative: function(actual, type) {
+    return type == 'undefined' || type == 'string';
+  }
 };
 
 var obj = {
@@ -30,8 +34,10 @@ var obj = {
     theme: 'blue',
     facebook: {}
   }],
+  test: function(){},
   langs: [3, 'hi'],
-  email: 'hi'
+  email: 'hi@gmail.com',
+  alternative: 'hi'
 };
 
 var errs = invalid(obj, schema);

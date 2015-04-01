@@ -1,4 +1,10 @@
 
+0.0.4 / 2015-03-31
+==================
+
+  * make work with browserify
+  * slightly better typechecking and fix error reporting
+
 0.0.3 / 2015-03-31
 ==================
 

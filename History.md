@@ -1,4 +1,9 @@
 
+0.0.5 / 2015-04-07
+==================
+
+  * make sure all the values in the schema are present
+
 0.0.4 / 2015-03-31
 ==================
 

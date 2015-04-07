@@ -96,7 +96,7 @@ function valid(actual, expected, key) {
   var errs = [];
 
   if ('object' == et && t == et) {
-    for (var k in actual)
+    for (var k in expected)
       errs = errs.concat(valid(actual[k], expected[k], key ? key + '.' + k : k));
   } else if ('array' == et && t == et) {
     for (var i = 0, v; v = actual[i]; i++)
